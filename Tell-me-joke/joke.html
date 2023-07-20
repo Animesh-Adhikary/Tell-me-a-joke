@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell me a joke</title>
+    <link rel="stylesheet" href="joke.css">
+</head>
+
+<body>
+    <div id="main">
+        <h3>Generate Random Joke</h3>
+        <div id="joke">
+            
+        </div>
+        
+        <div class="button">
+            <button id="button" onclick="genJoke()">make a joke</button>
+        </div>
+    </div>    
+
+
+    <script>
+        async function genJoke(){
+            const request = await fetch('https://v2.jokeapi.dev/joke/Any?type=single&amount=1')
+            const response = await request.json();
+            console.log(response.joke)
+
+            document.getElementById('joke').innerHTML = response.joke;
+        }
+    </script>
+</body>
+</html>
