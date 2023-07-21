@@ -1,0 +1,76 @@
+body{
+    background-image: url('pexels-francesco-ungaro-673648.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    -webkit-animation: slidein 100s;
+    animation: slidein 100s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;  
+
+    font-family: sans-serif;
+}
+@-webkit-keyframes slidein {
+    from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+#main{
+    width: 60%;
+    height: 430px;
+    font-family: sans-serif;
+    margin: 10% auto;
+    background: rgb(255, 255, 255);
+    border-radius: 6px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+h3{
+    text-align: center;
+    color:rgb(125, 125, 130);
+    padding-top: 2rem;
+    margin: 0 auto;
+}
+#joke{
+    position: relative;
+    font-family: sans-serif;
+    font-size: 22px;
+    top: 30px;
+    width: 80%;
+    height: 170px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 5% auto; */
+    /* background: rgb(248, 208, 208); */
+}
+.button{
+    width: 50%;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+button{
+    font-size: 19px;
+    margin: 4% auto;
+    padding: 9px 20px;
+    border: none;
+    border-radius: 6px;
+    background: rgb(192, 192, 248);
+    font-family: sans-serif;    
+    cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+    h3{
+        font-size: 18px;
+    }
+    #joke{
+        margin-bottom: 20%;
+    }
+} 
