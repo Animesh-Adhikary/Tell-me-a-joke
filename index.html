@@ -15,19 +15,30 @@
         </div>
         
         <div class="button">
-            <button id="button" onclick="genJoke()">make a joke</button>
+            <button id="button" >make a joke</button>
         </div>
     </div>    
 
 
     <script>
+        const button = document.getElementById('button');
+        
+ 
         async function genJoke(){
-            const request = await fetch('https://v2.jokeapi.dev/joke/Any?type=single&amount=1')
-            const response = await request.json();
-            console.log(response.joke)
-
-            document.getElementById('joke').innerHTML = response.joke;
+            try{
+                const request = await fetch('https://v2.jokeapi.dev/joke/Any?type=single&amount=1')
+                const response = await request.json();
+                console.log(response.joke)
+                
+                document.getElementById('joke').innerHTML = response.joke;
+            }catch(err){
+                console.log(`The error is ${err}`);
+            }
+            
         }
+
+        genJoke();
+        button.addEventListener('click', genJoke);
     </script>
 </body>
 </html>
